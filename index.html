@@ -15,10 +15,27 @@
         <button type="button" id="theme-toggle">Toggle dark mode</button>
     </header>
     <main id="main">
-        <section class="widget">
-            <h2>Sample Weather</h2>
-            <div id="weather-display">Loading weather…</div>
-        </section>
+        <div class="dashboard">
+            <section class="widget">
+                <h2>Sample Weather</h2>
+                <div id="weather-display">Loading weather…</div>
+            </section>
+            <section class="widget">
+                <h2>Quote</h2>
+                <div id="quotes-display">Loading quotes…</div>
+                <button type="button" id="new-quote-btn" class="btn-primary" disabled>New quote</button>
+            </section>
+            <section class="widget">
+                <h2>Tasks</h2>
+                <div id="task-stats" aria-live="polite"></div>
+                <form id="task-form">
+                    <label for="task-input">New task</label>
+                    <input type="text" id="task-input" required>
+                    <button type="submit" class="btn-primary">Add task</button>
+                </form>
+                <ul id="task-list"></ul>
+            </section>
+        </div>
     </main>
     <script src="js/apps.js"></script>
 </body>
