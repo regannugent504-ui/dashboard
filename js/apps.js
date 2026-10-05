@@ -1,4 +1,6 @@
 function loadWeather() {
+    const el = document.getElementById('weather-display');
+    el.innerHTML = `<div class="loading-state"><div class="spinner"></div><p>Loading weather…</p></div>`;
     fetch('./data/weather.json')
         .then(response => response.json())
         .then(data => displayWeather(data))
